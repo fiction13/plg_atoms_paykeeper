@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package    jAtomS - PayKeeper Plugin
+  ~ @version    __DEPLOY_VERSION__
+  ~ @author     Atom-S - atom-s.com
+  ~ @copyright  Copyright (c) 2017 - 2022 Atom-S LLC. All rights reserved.
+  ~ @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
+  ~ @link       https://atom-s.com
+  -->
+
+<form>
+	<fieldset name="payment">
+		<field type="note" label="PLG_JATOMS_PAYKEEPER" description="PLG_JATOMS_PAYKEEPER_DESCRIPTION"/>
+		<field type="payment_urls" label="COM_JATOMS_PARAMS_PAYMENT_URLS" plugin="paykeeper"/>
+		<field name="paykeeper_user" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_USER"
+			   class="input-xlarge"
+			   autocomplete="false"/>
+		<field name="paykeeper_password" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_PASSWORD"
+			   class="input-xlarge"
+			   autocomplete="false"/>
+		<field name="paykeeper_server" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SERVER"
+			   class="input-xlarge"
+			   autocomplete="false"/>
+		<field name="paykeeper_secret_key" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SECRET_KEY"
+			   class="input-xlarge"
+			   autocomplete="false"/>
+		<field name="paykeeper_vat" type="list"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_VAT"
+			   default="none">
+			<option value="none">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_NONE</option>
+			<option value="vat0">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_0</option>
+			<option value="vat10">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_10</option>
+			<option value="vat20">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_20</option>
+			<option value="vat110">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_110</option>
+			<option value="vat120">PLG_JATOMS_PAYKEEPER_PARAMS_VAT_120</option>
+		</field>
+		<field name="paykeeper_currency" type="list"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY"
+			   default="">
+			<option value="">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_DEFAULT</option>
+			<option value="RUB">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_RUB</option>
+			<option value="EUR">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_EUR</option>
+			<option value="USD">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_USD</option>
+			<option value="GBP">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_GBP</option>
+			<option value="UAH">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_UAH</option>
+			<option value="BYN">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_BYN</option>
+			<option value="KZT">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_KZT</option>
+			<option value="AZN">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_AZN</option>
+			<option value="CHF">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_CHF</option>
+			<option value="CZK">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_CZK</option>
+			<option value="CAD">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_CAD</option>
+			<option value="PLN">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_PLN</option>
+			<option value="SEK">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_SEK</option>
+			<option value="TRY">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_TRY</option>
+			<option value="CNY">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_CNY</option>
+			<option value="INR">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_INR</option>
+			<option value="BRL">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_BRL</option>
+			<option value="ZAL">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_ZAL</option>
+			<option value="UZS">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_UZS</option>
+			<option value="BGL">PLG_JATOMS_PAYKEEPER_PARAMS_CURRENCY_BGL</option>
+		</field>
+		<field name="paykeeper_kassa_method" type="list"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_METHOD"
+			   default="prepay">
+			<option value="prepay">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_METHOD_0</option>
+			<option value="part_prepay">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_METHOD_1</option>
+			<option value="advance">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_METHOD_2</option>
+			<option value="full">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_METHOD_3</option>
+		</field>
+		<field name="paykeeper_kassa_object" type="list"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT"
+			   default="service">
+			<option value="goods">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_0</option>
+			<option value="service">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_1</option>
+			<option value="work">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_2</option>
+			<option value="excise">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_3</option>
+			<option value="ip">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_4</option>
+			<option value="payment">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_5</option>
+			<option value="agent">PLG_JATOMS_PAYKEEPER_PARAMS_KASSA_OBJECT_6</option>
+		</field>
+
+		<field type="spacer" hr="true"/>
+		<field name="paykeeper_secondary" type="radio"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SECONDARY"
+			   class="btn-group btn-group-yesno"
+			   default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="paykeeper_secondary_tours" type="tours"
+			   label="COM_JATOMS_TOURS"
+			   multiple="true"
+			   showon="paykeeper_secondary:1"/>
+
+		<field name="paykeeper_secondary_user" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_USER"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_secondary:1"/>
+		<field name="paykeeper_secondary_password" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_PASSWORD"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_secondary:1"/>
+		<field name="paykeeper_secondary_server" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SERVER"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_secondary:1"/>
+		<field name="paykeeper_secondary_secret_key" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SECRET_KEY"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_secondary:1"/>
+
+		<field type="spacer" hr="true"/>
+		<field name="paykeeper_tertiary" type="radio"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_TERTIARY"
+			   class="btn-group btn-group-yesno"
+			   default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="paykeeper_tertiary_tours" type="tours"
+			   label="COM_JATOMS_TOURS"
+			   multiple="true"
+			   showon="paykeeper_tertiary:1"/>
+		<field name="paykeeper_tertiary_user" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_USER"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_tertiary:1"/>
+		<field name="paykeeper_tertiary_password" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_PASSWORD"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_tertiary:1"/>
+		<field name="paykeeper_tertiary_server" type="text"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SERVER"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_tertiary:1"/>
+		<field name="paykeeper_tertiary_secret_key" type="password"
+			   label="PLG_JATOMS_PAYKEEPER_PARAMS_SECRET_KEY"
+			   class="input-xlarge"
+			   autocomplete="false"
+			   showon="paykeeper_tertiary:1"/>
+	</fieldset>
+</form>

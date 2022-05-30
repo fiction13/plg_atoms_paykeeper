@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package    jAtomS - PayKeeper Plugin
+  ~ @version    __DEPLOY_VERSION__
+  ~ @author     Atom-S - atom-s.com
+  ~ @copyright  Copyright (c) 2017 - 2022 Atom-S LLC. All rights reserved.
+  ~ @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
+  ~ @link       https://atom-s.com
+  -->
+
+<extension version="3.9" type="plugin" group="jatoms" method="upgrade">
+	<name>PLG_JATOMS_PAYKEEPER</name>
+	<author>Atom-S</author>
+	<creationDate>March 2022</creationDate>
+	<copyright>Copyright (c) 2017 - 2020 Atom-S LLC. All rights reserved.</copyright>
+	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>hello@atom-s.com</authorEmail>
+	<authorUrl>https://atom-s.com/</authorUrl>
+	<version>1.0.0-dev</version>
+	<description>PLG_JATOMS_PAYKEEPER_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_jatoms_paykeeper.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_jatoms_paykeeper.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_jatoms_paykeeper.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_jatoms_paykeeper.sys.ini</language>
+	</languages>
+
+	<files>
+		<folder>forms</folder>
+		<filename plugin="paykeeper">paykeeper.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="debug"
+					   type="radio"
+					   default="0"
+					   class="btn-group btn-group-yesno"
+					   label="PLG_JATOMS_PAYKEEPER_PARAMS_DEBUG"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="jAtoms - PayKeeper">
+			https://start.atom-s.com/solutions/update?element=plg_jatoms_paykeeper
+		</server>
+	</updateservers>
+
+</extension>
